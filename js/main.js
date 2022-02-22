@@ -1,7 +1,7 @@
 
 const getData = async () => {
     let city = document.querySelector('#city').value
-    let token = '3daf778d9433b6d3256eb3dd3cc47997'
+    let token = config.MY_KEY
     let response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${token}`) // This is for getting a different endpoint
     console.log(response.data)
     return response.data
